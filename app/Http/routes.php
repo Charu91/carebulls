@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::get('create','TasksController@create');
+Route::get('create',   ['as' => 'create', 'uses' => 'TasksController@create']);
+Route::post('store',  ['as' => 'store', 'uses' => 'TasksController@store']);
