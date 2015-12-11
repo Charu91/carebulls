@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use app\Http\Models\Task;
 
 
 class TasksController extends Controller
@@ -24,6 +25,13 @@ class TasksController extends Controller
 		Task::create($input);
 
 		return redirect()->back();
+	}
+	
+	public function show()
+	{
+		return view('hospitalListing', ['posts' => Task::all()]);
+		
+		
 	}
 	
   

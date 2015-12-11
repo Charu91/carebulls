@@ -1,5 +1,6 @@
 <?php namespace app\Http\Models;
 
+
 class Task extends Model {
 
     /**
@@ -9,7 +10,10 @@ class Task extends Model {
      */
     protected $fillable = [
         'username',
-        'password'
-    ];
+           ];
+
+	protected $hidden = array('password');
+	
+	protected $table = 'carebulls';
 
 }
