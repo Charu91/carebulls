@@ -18,9 +18,10 @@ Route::get('/', function () {
 
 Route::get('login',   ['as' => 'login', 'uses' => 'TasksController@login']);
 Route::post('store',   ['as' => 'store', 'uses' => 'TasksController@store']);
-Route::post('hospitalListing',  ['as' => 'show', 'uses' => 'TasksController@show']);
-=======
-//Route::get('create','TasksController@create');
-//Route::get('create',   ['as' => 'create', 'uses' => 'TasksController@create']);
-//Route::post('store',  ['as' => 'store', 'uses' => 'TasksController@store']);
-
+Route::get('welcome1',   ['as' => 'welcome1', 'uses' => 'TasksController@welcome1']);
+Route::get('hospitalListing',  ['as' => 'HospitalShow', 'uses' => 'TasksController@HospitalShow']);
+Route::get('brands',  ['as' => 'BrandShow', 'uses' => 'TasksController@BrandShow']);
+Route::get('addHospital',  ['as' => 'AddHospital', 'uses' => 'TasksController@AddHospital']);
+Route::post('hospitalStore',  ['as' => 'hospital_store', 'uses' => 'TasksController@hospitalStore']);
+Route::get('addBrand',   ['as' => 'AddBrand', 'uses' => 'TasksController@AddBrand']);
+Route::post('BrandStore',  ['as' => 'brandStore', 'uses' => 'TasksController@BrandStore']);

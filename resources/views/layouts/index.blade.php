@@ -9,8 +9,8 @@
 #nav {
     line-height:30px;
     background-color:black;
-    height:300px;
-    width:200px;
+    height:85%;
+    width:13%;
     float:left;
     padding:5px; 
 }
