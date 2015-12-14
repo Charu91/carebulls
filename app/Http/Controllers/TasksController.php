@@ -6,6 +6,7 @@ use app\Http\Models\Task;
 
 class TasksController extends Controller
 {
+
     public function login()
 	{
     return view('login');
@@ -13,16 +14,18 @@ class TasksController extends Controller
 	
 	}
 	
-	 
+    public function create()
+	{
+    return view('create');
+	}
+
 	public function store(Request $request)
 	{
 		$this->validate($request, [
 									'username' => 'required',
 									'password' => 'required'
 								]);
-								
-		
-		
+	
 		$input = $request->all();
 
 		Task::welcome1($input);
@@ -30,12 +33,9 @@ class TasksController extends Controller
 		return redirect()->back();
 	}
 
-	
-	
 	public function show()
 	{
 		return view('hospitalListing', ['posts' => Task::all()]);
-		
 		
 	}
 	

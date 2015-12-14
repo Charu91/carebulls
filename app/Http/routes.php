@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('login',   ['as' => 'login', 'uses' => 'TasksController@login']);
 Route::post('store',   ['as' => 'store', 'uses' => 'TasksController@store']);
 Route::post('hospitalListing',  ['as' => 'show', 'uses' => 'TasksController@show']);
+=======
+//Route::get('create','TasksController@create');
+//Route::get('create',   ['as' => 'create', 'uses' => 'TasksController@create']);
+//Route::post('store',  ['as' => 'store', 'uses' => 'TasksController@store']);
+

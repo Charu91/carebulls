@@ -72,11 +72,20 @@
 						
 						<!-- we will also add show, edit, and delete buttons 
 						<td>
+<<<<<<< HEAD
 							
+=======
+
+							<!-- show the nerd (uses the show method found at GET /nerds/{id} 
+>>>>>>> befdc2d6ece4e6ef6af7ad97afeef256847127f1
 							<a class="btn btn-small btn-success" href=">Edit</a>
 							
 							<a class="btn btn-small btn-success" href=">Delete</a>
 							
+<<<<<<< HEAD
+=======
+							<!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit 
+>>>>>>> befdc2d6ece4e6ef6af7ad97afeef256847127f1
 							<a class="btn btn-small btn-info" href="{{ URL::to('nerds/' . $value->id . '/edit') }}">Edit this Nerd</a>
 
 						</td>
