@@ -25,3 +25,6 @@ Route::get('addHospital',  ['as' => 'AddHospital', 'uses' => 'TasksController@Ad
 Route::post('hospitalStore',  ['as' => 'hospital_store', 'uses' => 'TasksController@hospitalStore']);
 Route::get('addBrand',   ['as' => 'AddBrand', 'uses' => 'TasksController@AddBrand']);
 Route::post('BrandStore',  ['as' => 'brandStore', 'uses' => 'TasksController@BrandStore']);
+
+Route::get('mail',   ['as' => 'mail', 'uses' => 'MailController@mail']);
+Route::get('sendmail',  ['as' => 'sendmail', 'uses' => 'MailController@sendmail']);

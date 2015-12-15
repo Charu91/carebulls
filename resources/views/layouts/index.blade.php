@@ -1,11 +1,14 @@
 
 <style>
+
 #header {
     background-color:black;
     color:white;
     text-align:center;
     padding:5px;
+	
 }
+
 #nav {
     line-height:30px;
     background-color:black;

@@ -1,5 +1,6 @@
 <style>
-#AddHospital{
+#AddHospital
+{
 
 margin-left: 15% ;
 
@@ -9,10 +10,10 @@ input[type="text"]
 	padding-left: 2% ;
 	
  }
-	
 }
 
-#AddBrand{
+#AddBrand
+{
 
 margin-left: 15% ;
 

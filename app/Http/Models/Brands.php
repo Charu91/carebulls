@@ -1,9 +1,11 @@
-<?php namespace app\Http\Models;
+<?php
+namespace App\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use DB;
 
-class Task extends Model {
+class Brands extends Model
+ {
 
     /**
      * Fillable fields
@@ -18,7 +20,5 @@ class Task extends Model {
 	
 	protected $table = 'brands';
 	
-	//$brands = DB::table('brands');
-	//$hospitals = DB::table('hospitals');
-							
+		
 }

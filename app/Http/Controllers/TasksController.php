@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use Form;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Validator;
 use Redirect;
 use Input;
-use app\Http\Models\Task;
+use App\Http\Models\Hospitals;
+use App\Http\Models\Brands;
 
 class TasksController extends Controller
 {
-
+	
+			
     public function login()
 	{
     return view('login');
-	//return redirect()->route('login');
-	
 	}
 
 	public function store(Request $request)
@@ -39,15 +40,14 @@ class TasksController extends Controller
 	}
 
 	public function HospitalShow()
-	{
-		//return View::make('hospitalListing')->with('post', $posts);
-		return view('hospitalListing', ['posts' => Task::all()]);
-		//return view('hospitalListing');
+	{		
+		return view('hospitalListing', ['posts' => Hospitals::all()]);
+					
 	}
 	public function BrandShow()
 	{
-		//return view('brands', ['posts' => Task::all()]);
-		return view('brands');
+		return view('brands', ['posts' => Brands::all()]);
+		//return view('brands');
 	}
 	
 	public function AddHospital()
@@ -93,23 +93,24 @@ class TasksController extends Controller
 						
 
 					
-			 $hospitals = new hospitals;
+			 $Hospitals = new Hospitals;
 
-			 $hospitals->brand_id = $request->brand_id;
-			 $hospitals->name = $request->name;
-			 $hospitals->description = $request->description;
-			 $hospitals->contact_email = $request->contact_email;
-			 $hospitals->contact_no = $request->contact_no;
-			 $hospitals->address = $request->address;
-			 $hospitals->state = $request->state;
-			 $hospitals->city = $request->city;
-			 $hospitals->zip_code = $request->zip_code;
-			 $hospitals->save();
+			 $Hospitals->brand_id = $request->brand_id;
+			 $Hospitals->name = $request->name;
+			 $Hospitals->description = $request->description;
+			 $Hospitals->contact_email = $request->contact_email;
+			 $Hospitals->contact_no = $request->contact_no;
+			 $Hospitals->address = $request->address;
+			 $Hospitals->state = $request->state;
+			 $Hospitals->city = $request->city;
+			 $Hospitals->zip_code = $request->zip_code;
+			 $Hospitals->save();
 			 
 			 echo "A new hospital has been added successfully";
+			 return view('addHospital');
 		}
 	}
-	
+
 	public function AddBrand()
 	{
 		return view('addBrand');
@@ -138,14 +139,16 @@ class TasksController extends Controller
 			 $description  	= (!isset($data['description'])) ? NULL : $data['description'];
 			 $thumb_url		= (!isset($data['contact_email'])) ? NULL : $data['contact_email'];
 			 					
-			 $Task = new Task;
-			 $Task->name = $request->name;
-			 $Task->description = $request->description;
-			 $Task->thumb_url = $request->thumb_url;
-			 $Task->save();
+			 $Brands = new Brands;
+			 $Brands->name = $request->name;
+			 $Brands->description = $request->description;
+			 $Brands->thumb_url = $request->thumb_url;
+			 $Brands->save();
 			 
 			 echo "A new brand has been added successfully";
+			 return view('addBrand');
 		}
+		
 		
 	}
   

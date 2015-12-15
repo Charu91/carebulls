@@ -18,7 +18,7 @@
 	<div class="container">
 		<nav class="navbar navbar-inverse">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="{{ URL::to('create') }}">Carebulls</a>
+				<a class="navbar-brand" href="{{ URL::to('welcome1') }}">Carebulls</a>
 			</div>
 			<ul class="nav navbar-nav">
 				<!--<li><a href="{{ URL::to('hospitals') }}">Hospitals</a></li>
@@ -32,10 +32,10 @@
 		@if (Session::has('message'))
 			<div class="alert alert-info">{{ Session::get('message') }}</div>
 		@endif
-		<div>
+		<div >
 			<div id="nav">
 				<ul class="nav navbar-nav">
-					<li><a href>Welcome</a></li></br>
+					<li><a href="{{ URL::to('welcome1') }}">Home</a></li></br>
 					<li><a href>Listings</a></li></br>
 				</ul>
 			</div>
