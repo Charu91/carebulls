@@ -14,4 +14,7 @@ table{
 		font-size: 100%;
             line-height: 2;
 	}
+	thead{
+		 font-weight: bold;
+	}
 </style>
