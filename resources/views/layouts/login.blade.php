@@ -1,55 +1,64 @@
-<style>
+<html>
+<head>
+	 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"> 
+	
+</head>
+<body link = "white">
+	
+<div class="container">
+            @yield('content')
+        </div>
+</body>
 
-#login_form{
-	frame:box-shadow;
-	align:center;
- font-size: 20px;
-    color: #black;
-    float: center;
-    margin-top: 12%;
-  margin-right: 45%;
-	margin-left: 40%;
-	padding: 20px;
-   
-box-shadow: inset 0 1.5px 3px rgba(190, 190, 200, .5), 0 0 0 5px #f5f7f8;
-    
+</html>
+
+
+<style>
+#nav {
+	margin-top:200%;
+    line-height:30px;
+    float:center;
+    padding:5px; 
 }
-input[type=text]:hover,
-input[type=password]:hover {
-    border: 1px solid #b6bfc0;
-    box-shadow: inset 0 1.5px 3px rgba(190, 190, 200, .8), 0 0 0 5px #f5f7f8;
+#login_form
+{
+	float:center;
+	border-radius: 25px;
+    border: 1px solid #A9A9A9;
+    padding: 20px; 
+    width: 350px;
+    height: 300px;
 }
-input[type=text]:focus,
-input[type=password]:focus {
-    border: 1px solid #a8c9e4;
-    box-shadow: inset 0 1.5px 3px rgba(190, 190, 200, .7), 0 0 0 5px #e6f2f9;
+
+#login_content {
+	margin-top:20%;
+    line-height:30px;
+     width: 350px;
+    height: 300px;
+    float:center;
+    padding:0.5%; 
 }
-input[type=submit] {
-    
-    margin-right: 20px;
-    margin-top: 5%;
-    width: 80px;
-    height: 30px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #D3D3D3; /*IE fallback*/
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#D3D3D3), to(#D3D3D3));
-    background-image: -moz-linear-gradient(top left 90deg, #D3D3D3 0%, #D3D3D3 100%);
-    background-image: linear-gradient(top left 90deg, #D3D3D3 0%, #D3D3D3 100%);
-    border-radius: 30px;
-    border: 1px solid #66add6;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
-    cursor: pointer;
+#email
+{
+	border: 1px solid #A9A9A9;
+	border-radius: 5px;
+	height: 30px;
+	width: 100%;
+	padding:3%
 }
-input[type=submit]:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#D3D3D3), to(#D3D3D3));
-    background-image: -moz-linear-gradient(top left 90deg, #D3D3D3 0%, #D3D3D3 100%);
-    background-image: linear-gradient(top left 90deg, #D3D3D3 0%, #D3D3D3 100%);
+#password 
+{
+	border: 1px solid #A9A9A9;
+	border-radius: 5px;
+	height: 30px;
+	
+	width: 100%;
+	padding:3%
 }
-input[type=submit]:active {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#D3D3D3), to(#D3D3D3));
-    background-image: -moz-linear-gradient(top left 90deg, #D3D3D3 0%, #D3D3D3 100%);
-    background-image: linear-gradient(top left 90deg, #D3D3D3 0%, #D3D3D3 100%);
+#error_message
+{
+	font-size:5px;
+	font-color:red;
 }
+
 </style>

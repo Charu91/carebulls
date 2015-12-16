@@ -39,16 +39,13 @@
 			<div id ="table_area">
 				<a class="btn btn-small btn-success" href="{{ URL::to('addBrand') }}">Add new Brand</a> </br> </br>
 			
-				<table class="table table-striped table-bordered">
+				<table class="table table-striped table-hover">
 					<thead>
-						<tr>
-							<b>
-								<td>Name</td>
-								<td>Description</td>
-								<td>Thumb URL</td>
-								<td> </td>
-								<td> </td>
-							</b>
+						<tr class="bg-info">
+								<th>Name</th>
+								<th>Description</th>
+								<th>Thumb URL</th>
+								<th colspan="2">Actions</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -57,9 +54,8 @@
 									<td> {{$post->name}}</td>
 									<td> {{$post->description}}</td>
 									<td> {{$post->thumb_url}}</td>
-												
-									<td><a href="">Edit</a></td>
-									<td><a href="">Delete</a></td>
+									<td><a href="" class="btn btn-warning">Edit</a></td>
+									<td><a href="" class="btn btn-danger">Delete</a></td>
 								</tr>
 						@endforeach		
 					</tbody>

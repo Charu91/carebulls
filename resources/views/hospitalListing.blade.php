@@ -38,39 +38,41 @@
 			
 				<a class="btn btn-small btn-success" href="{{ URL::to('addHospital') }}">Add new Hospital</a> </br> </br>
 			
-				<table class="table table-striped table-bordered">
+				<table class="table table-striped table-hover">
 					<thead>
 						<tr>
-							<b>
-								<td>Brand ID</td>
-								<td>Name</td>
-								<td>Description</td>
-								<td>Email</td>
-								<td>Phone Number</td>
-								<td>Address</td>
-								<td>State</td>
-								<td>City</td>
-								<td>Zip Code</td>
-								<td>	</td>
-								<td>	</td>
-							</b>
+								<th>Brand ID</th>
+								<th>Name</th>
+								<th>Description</th>
+								<th>Email</th>
+								<th>Phone Number</th>
+								<th>Address</th>
+								<th>State</th>
+								<th>City</th>
+								<th>Zip Code</th>
+								<th colspan="2">Actions</th>
 						</tr>
 					
 					</thead>
 					<tbody>
-						@foreach($posts as $post)
+						@foreach($hospitals as $hospital)
 							<tr>
-								<td>{{ $post->brand_id}}</td>
-								<td>{{ $post->name}}</td>
-								<td>{{ $post->description}}</td>
-								<td>{{ $post->contact_email}}</td>
-								<td>{{ $post->contact_no}}</td>
-								<td>{{ $post->address}}</td>
-								<td>{{ $post->state}}</td>
-								<td>{{ $post->city}}</td>
-								<td>{{ $post->zip_code}}</td>
-								<td><a href="">Edit</a></td>
-								<td> <a href="">Delete</a></td>							
+								<td>{{ $hospital->brand_id}}</td>
+								<td>{{ $hospital->name}}</td>
+								<td>{{ $hospital->description}}</td>
+								<td>{{ $hospital->contact_email}}</td>
+								<td>{{ $hospital->contact_no}}</td>
+								<td>{{ $hospital->address}}</td>
+								<td>{{ $hospital->state}}</td>
+								<td>{{ $hospital->city}}</td>
+								<td>{{ $hospital->zip_code}}</td>
+								<td><a href="{{route('editHospital',$hospital->id)}}" class="btn btn-warning">Edit</a></td>
+								<td> 
+								{!! Form::open(['method' => 'DELETE', 'route'=>['hospitaldestroy', $hospital->id]]) !!}
+								 {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+								 {!! Form::close() !!}
+								 </td>
+														
 								
 							</tr>
 						@endforeach			
@@ -88,6 +90,7 @@
 	{
 		var Hospitals = $('#example').dataTable();
 	} );
+
 
 	function editRow ( Hospitals, nRow )
 	{
