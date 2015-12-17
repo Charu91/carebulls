@@ -38,11 +38,11 @@
 				</ul>
 			</div>
 			
-			<div id ="AddHospital" class="container cms-page">
+			<div id ="EditHospital" class="container cms-page">
 				<div class="row ">
 					<div class="col-md-12 entry-content">
-				<!--	{!! Form::open(array('route' => 'hospital_store', 'class' => 'form')) !!}  -->
-					{!! Form::open(array('url' => '/hospitalStore','class' => 'form')) !!}
+					{!! Form::open(array('url' => '/UpdateHospital/'. $id, 'class' => 'form')) !!} 
+			
 					<div class="form-group">
 						{!! Form::label('brand_id', 'Brand ID:', ['class' => 'control-label']) !!}</br>
 						{!! Form::text('brand_id', null, ['class' => 'form-control']) !!}
@@ -83,7 +83,7 @@
 					</div>
 						<br>
 					<div class="form-group">
-						{!! Form::submit('Submit', array('class'=>'btn btn-primary')) !!}
+						{!! Form::submit('Update Changes', array('class'=>'btn btn-primary')) !!}
 					</div>
 					{!! Form::close() !!}	
 					</div>

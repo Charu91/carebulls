@@ -42,6 +42,7 @@
 				<table class="table table-striped table-hover">
 					<thead>
 						<tr class="bg-info">
+								<th>ID</th>
 								<th>Name</th>
 								<th>Description</th>
 								<th>Thumb URL</th>
@@ -51,11 +52,16 @@
 					<tbody>
 						@foreach($posts as $post)
 								<tr>
+									<td> {{$post->id}}</td>
 									<td> {{$post->name}}</td>
 									<td> {{$post->description}}</td>
 									<td> {{$post->thumb_url}}</td>
-									<td><a href="" class="btn btn-warning">Edit</a></td>
-									<td><a href="" class="btn btn-danger">Delete</a></td>
+									<td><a href="{{ URL::to('editBrand',$post->id) }}" class="btn btn-warning">Edit</a></td>	
+								<!--		<td>{!! Form::open(['route' => ['BrandDestroy', $post->id], 'method' => 'post']) !!}
+												<button type="submit" class="btn btn-danger" onclick="ConfirmDelete()">Delete</button>
+												{!! Form::close() !!}</td>	-->
+								<td><a href="{{ URL::to('BrandDestroy',$post->id) }}" class="btn btn-danger" onclick="ConfirmDelete()">Delete</a></td>
+										</td>	
 								</tr>
 						@endforeach		
 					</tbody>
@@ -65,5 +71,23 @@
 	</div>
 </body>
 </html>
+ <script type="text/javascript">
+    function ConfirmDelete()
+  {
+	  var retVal = confirm("Do you want to continue ?");
+		if (retVal == true)
+		{
+			return true;
+			
+		} 
+		else
+		{
+			return false;
+			
+		}
+	}
 	
+
+</script>	
 @stop
+

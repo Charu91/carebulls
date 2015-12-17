@@ -4,7 +4,7 @@
 	<div class="row ">
 		<div class="col-md-12 entry-content" >
 			
-				{!! Form::open(array('route' => 'store', 'class' => 'form' , 'id'=>'login_form')) !!} 
+				{!! Form::open(array('url' => '/authenticate/', 'class' => 'form' , 'id'=>'login_form')) !!} 
 				<!-- {!! Form::open(array('url' => 'login', 'class' => 'form')) !!} -->
 				
 					@if(Session::has('error'))

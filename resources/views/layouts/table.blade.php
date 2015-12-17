@@ -4,7 +4,7 @@
 {
 	margin-left: 15% ;
 	margin-right: 10% ;
-	width: 75%;
+	width: 70%;
 	height: 85%;
 	font-size: 90%;
 	
