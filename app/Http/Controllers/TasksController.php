@@ -26,9 +26,10 @@ class TasksController extends Controller
 	public function welcome1()
 	{
 		$user = Auth::user();
+		$name = $user->name;
 		return view('welcome1');
 		
-		//print_r ($user);
+		//print_r ($user->name);
 	}
 
 	public function HospitalShow()
