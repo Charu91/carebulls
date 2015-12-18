@@ -12,3 +12,7 @@
 	
     </body>
 </html>
+
+<style>
+.logout { float:right;}
+</style>

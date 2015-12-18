@@ -11,13 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as' => 'home', 'uses' => 'TasksController@login']);
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
-Route::get('login',   ['as' => 'login', 'uses' => 'TasksController@login']);
-Route::get('auth/login', 'Auth\AuthController@authenticate');
-//Route::post('store',   ['as' => 'store', 'uses' => 'TasksController@store']);
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
 Route::get('welcome1',   ['as' => 'welcome1', 'uses' => 'TasksController@welcome1']);
 
 Route::get('hospitalListing',  ['as' => 'HospitalShow', 'uses' => 'TasksController@HospitalShow']);
@@ -34,5 +37,5 @@ Route::get('editBrand/{id}',   ['as' => 'edit_Brand', 'uses' => 'TasksController
 Route::post('UpdateBrand/{id}',  ['as' => 'UpdateBrand', 'uses' => 'TasksController@UpdateBrand']);
 Route::get('BrandDestroy/{id}',  ['as' => 'BrandDestroy', 'uses' => 'TasksController@BrandDestroy']);
 
-Route::get('mail',   ['as' => 'mail', 'uses' => 'MailController@mail']);
+Route::get('mail1',   ['as' => 'mail1', 'uses' => 'MailController@mail1']);
 Route::get('sendmail',  ['as' => 'sendmail', 'uses' => 'MailController@sendmail']);

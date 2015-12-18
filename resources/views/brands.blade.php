@@ -19,6 +19,7 @@
 				
 				<li><a href="{{ URL::to('hospitalListing') }}">Hospitals</a></li>
 				<li><a href="{{ URL::to('brands') }}">Brands</a></li>
+				<li><a href="{{ URL::to('/auth/logout/') }}">Logout</a></li>
 			</ul>
 		</nav>
 
@@ -30,7 +31,7 @@
 				<div id="nav">
 					<ul class="nav navbar-nav">
 						<li><a href="{{ URL::to('welcome1') }}">Home</a></li></br>
-						<li><a href>Listings</a></li></br>
+						
 					</ul>
 				
 				</div>

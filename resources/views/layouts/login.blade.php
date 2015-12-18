@@ -60,5 +60,32 @@
 	font-size:5px;
 	font-color:red;
 }
+#password_confirmation 
+{
+	border: 1px solid #A9A9A9;
+	border-radius: 5px;
+	height: 30px;
+	
+	width: 100%;
+	padding:3%
+}
+#name 
+{
+	border: 1px solid #A9A9A9;
+	border-radius: 5px;
+	height: 30px;
+	
+	width: 100%;
+	padding:3%
+}
+#register_form
+{
+	float:center;
+	border-radius: 25px;
+    border: 1px solid #A9A9A9;
+    padding: 20px; 
+    width: 350px;
+    height: 450px;
+}
 
 </style>

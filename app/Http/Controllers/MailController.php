@@ -7,24 +7,19 @@ use Illuminate\Http\Request;
 
 class MailController extends Controller
 {
-	public function mail()
+	public function mail1()
 	{
-		return view('mail');
+		return view('mail1');
 	}
 	
 	public static function sendmail()
 	{	
-			
-        Mail::send('mail', ['msg' => 'hello'], function ($message) {
-            $message->from('charu917@gmail.com', 'charu');
-
-            $message->to('charu917@gmail.com', 'charu')->subject('My Test Email!');
-        });
-
-        var_dump('sent');
-				
-			
+		Mail::send('welcome1', ['key' => 'value'], function($message)
+		{
+			$message->to('charu@devzila.com', 'Charu')->subject('Welcome to Carebulls!');
+		});
+			echo "mail sent sucessfully";
 	}
-}
 	
+}
 ?>	

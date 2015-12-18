@@ -19,21 +19,16 @@ class TasksController extends Controller
 {
 	public function login()
 	{
-		return view('login');
+		return view('auth/login');
+		
     }
   
-    public function authenticate()
-    {
-        if (Auth::attempt(['email' => $email, 'password' => $password]))
-        {
-            return redirect()->intended('welcome1');
-        }
-    }
-	
 	public function welcome1()
 	{
+		$user = Auth::user();
 		return view('welcome1');
 		
+		//print_r ($user);
 	}
 
 	public function HospitalShow()
