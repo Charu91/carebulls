@@ -4,8 +4,8 @@
 {
 	margin-left: 15% ;
 	margin-right: 10% ;
-	width: 70%;
-	height: 85%;
+	width: 80%;
+	height: 80%;
 	font-size: 90%;
 	
 	
@@ -17,4 +17,14 @@ table{
 	thead{
 		 font-weight: bold;
 	}
+	
+#next
+{
+float : right;	
+}
+#previous
+{
+	float:left;
+}
+	
 </style>

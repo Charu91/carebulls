@@ -76,7 +76,7 @@
 					</tbody>
 				</table>
 			</div>
-
+			<center>	{!! $posts->render() !!}	</center?>
 		</div>
 	</div>
 </body>

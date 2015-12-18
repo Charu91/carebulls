@@ -9,10 +9,11 @@ use Validator;
 use Redirect;
 use Input;
 use Auth;
+use DB;
 use Session;
 use App\Http\Models\Hospitals;
 use App\Http\Models\Brands;
-
+use Illuminate\Pagination\Paginator;
 
 class TasksController extends Controller
 {
@@ -36,13 +37,18 @@ class TasksController extends Controller
 	}
 
 	public function HospitalShow()
-	{		
-		return view('hospitalListing', ['posts' => Hospitals::all()]);
-					
+	{	
+		//return view('hospitalListing', ['posts' => Hospitals::all()]);
+		
+		$posts = DB::table('hospitals')->paginate(7);
+        return view('hospitalListing', ['posts' => $posts]);
 	}
 	public function BrandShow()
 	{
-		return view('brands', ['posts' => Brands::all()]);
+		$posts = DB::table('brands')->paginate(3);
+        return view('brands', ['posts' => $posts]);
+		echo $users->render();
+		
 	}
 	
 	public function AddHospital()
